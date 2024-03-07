@@ -39,7 +39,10 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-
+.nav-logo {
+    width: 60px;
+    z-index: -1;
+    }
 .tab {
     cursor: pointer;
     font-size: 0.875rem;
