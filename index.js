@@ -12,6 +12,14 @@
     let currentTab = userTab;
     const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 
+    const weatherBackgrounds = {
+        Clear: "./assets/clear_sky.webp",
+        Haze: "./assets/haze.jpg",
+        Clouds: "./assets/cloudy_sky.jpg",
+        Rain: "./assets/rainy_day.jpg",
+        Mist:"./assets/misty_background.jpeg",
+        
+    };
     // Setting default tab
     currentTab.classList.add("current-tab");
 
@@ -151,6 +159,18 @@
     windspeed.innerText = `${weatherInfo?.wind?.speed.toFixed(2)}m/s`;
     humidity.innerText = `${weatherInfo?.main?.humidity}%`;
     cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
+    
+    const body = document.querySelector("body");
+    const weatherCondition = weatherInfo?.weather?.[0]?.main;
+
+    if (weatherCondition && weatherBackgrounds.hasOwnProperty(weatherCondition)) {
+        const backgroundImage = weatherBackgrounds[weatherCondition];
+        body.style.backgroundImage = `url(${backgroundImage})`;
+    } else {
+        // Set a default background image if weather condition not found
+        body.style.backgroundImage = `url(default_background_image.jpg)`;
+    }
+
     }
 
     // - - - - - - - - - - - -Search Weather Handling- - - - - - - - - - - -

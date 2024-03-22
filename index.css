@@ -26,9 +26,25 @@ body {
 h1 {
     text-align: center;
     margin-block: 2rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     word-spacing: 2px;
-    letter-spacing: 1.75px;
+    letter-spacing: 2px;
+}
+.heading {
+    font-family: Arial, sans-serif;
+    font-size: 3.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(135deg, #c941fe, #6e48aa);;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(17, 17, 163, 0.5);
+    text-decoration: underline;
+    text-decoration-color: #3F72AF;
+}
+.spani{
+    font-size:5rem;
+
 }
 
 .tab-container {
