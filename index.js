@@ -13,7 +13,7 @@
     const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 
     const weatherBackgrounds = {
-        Clear: "./assets/clear_sky.webp",
+        Clear: "./assets/summer.jpg",
         Haze: "./assets/haze.jpg",
         Clouds: "./assets/cloudy_sky.jpg",
         Rain: "./assets/rainy_day.jpg",
